@@ -20,4 +20,4 @@ jobs:
         flutter-version: '2.8.1'
     - run: flutter pub get
     - run: flutter build apk --no-sound-null-safety
-    - run: flutter build appbundle
+    - run: flutter build appbundle --no-sound-null-safety
