@@ -29,9 +29,4 @@ jobs:
       with:
         name: release-apk
         path: build/app/outputs/apk/release/app-release.apk
-    - name: Grant execute permission for scripts/upload-apk.sh
-      run: chmod +x scripts/upload-apk.sh
-    - name: Deploy to Repo
-      run: ./scripts/upload-apk.sh
-      env:
-        PAT: ${{ secrets.PAT }}
+    
