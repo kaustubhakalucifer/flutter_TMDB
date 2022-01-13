@@ -13,11 +13,9 @@ find ../build/app/outputs/apk/release/ -type f -name '*.apk' -exec cp -v {} . \;
 git checkout --orphan temporary
 
 for file in app*; do
-    if [[ $file == *"unsigned"* ]];then
-        mv $file ${GITHUB_REPOSITORY#*/}-${file#*-}
-        git add ${GITHUB_REPOSITORY#*/}-${file#*-}
-        git commit -am "Update ${GITHUB_REPOSITORY#*/}-${file#*-} ($(date +%Y-%m-%d.%H:%M:%S))"
-    fi
+    mv $file ${GITHUB_REPOSITORY#*/}-${file#*-}
+    git add ${GITHUB_REPOSITORY#*/}-${file#*-}
+    git commit -am "Update ${GITHUB_REPOSITORY#*/}-${file#*-} ($(date +%Y-%m-%d.%H:%M:%S))"
 done
 
 git branch -D main
