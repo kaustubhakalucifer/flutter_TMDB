@@ -35,4 +35,10 @@ jobs:
       run: ./scripts/upload-apk.sh
       env:
         PAT: ${{ secrets.PAT }}
+    - name: Grant execute permission for scripts/upload-app.sh
+      run: chmod +x scripts/upload-app.sh
+    - name: Deploy to Repo
+      run: ./scripts/upload-app.sh
+      env:
+        PAT: ${{ secrets.PAT }}
     
