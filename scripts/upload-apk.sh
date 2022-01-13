@@ -2,7 +2,7 @@
 git config --global user.name "Github Actions"
 git config --global user.email "no-reply@gactions.com"
 
-git clone --quit --branch=apk https://kaustubhakalucifer:$PAT@github.com//kaustubhakalucifer/flutter_TMDB apk > /dev/null
+git clone --quite --branch=apk https://kaustubhakalucifer:$PAT@github.com//kaustubhakalucifer/flutter_TMDB apk > /dev/null
 
 cd apk
 
