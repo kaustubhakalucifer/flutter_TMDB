@@ -5,6 +5,7 @@ git config --global user.email "no-reply@gactions.com"
 
 git clone --quiet --branch=apk https://kaustubhakalucifer:$PAT@github.com/kaustubhakalucifer/flutter_TMDB apk > /dev/null
 cd apk
+ls -l
 find ../build/app/outputs/apk/release/ -type f -name '*.apk' -exec cp -v {} . \;
 
 git checkout --orphan temporary
