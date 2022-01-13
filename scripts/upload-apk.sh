@@ -8,7 +8,7 @@ cd AndroidAppReleases
 
 rm -rf ${GITHUB_REPOSITORY#*/}*
 
-find ../app/build/outputs -type f -name '*.apk' -exec cp -v {} . \;
+find app/build/outputs -type f -name '*.apk' -exec cp -v {} . \;
 
 git checkout --orphan temporary
 
