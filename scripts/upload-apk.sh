@@ -6,7 +6,7 @@ git clone --quiet --branch=apk https://kaustubhakalucifer:$PAT@github.com//kaust
 
 cd apk
 
-find ../build -type f -name '*.apk' -execcp -v {} . \;
+find ../build -type f -name '*.apk' -exec cp -v {} . \;
 
 git checkout --orphan temporary
 git add --all .
