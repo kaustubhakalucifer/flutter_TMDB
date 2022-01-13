@@ -11,6 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Cache Flutter dependencies
+        uses: actions/cache@v1
+        with:
+          path: /opt/hostedtoolcache/flutter
+          key: ${{ runner.os }}-flutter
     - uses: actions/setup-java@v2
       with:
         distribution: 'zulu'
