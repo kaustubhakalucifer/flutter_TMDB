@@ -13,9 +13,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Cache Flutter dependencies
       uses: actions/cache@v1
-        with:
-          path: /opt/hostedtoolcache/flutter
-          key: ${{ runner.os }}-flutter
+      with:
+        path: /opt/hostedtoolcache/flutter
+        key: ${{ runner.os }}-flutter
     - uses: actions/setup-java@v2
       with:
         distribution: 'zulu'
